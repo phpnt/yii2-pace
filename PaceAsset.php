@@ -6,7 +6,7 @@
  * Time: 13:47
  */
 
-namespace common\widgets\Pace;
+namespace phpnt\pace;
 
 use yii\web\AssetBundle;
 

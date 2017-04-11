@@ -1,9 +1,9 @@
-phpNT - metisMenu
+phpNT - Yii2 Pace
 ================================
-[![Latest Stable Version](https://poser.pugx.org/phpnt/yii2-metismenu/v/stable)](https://packagist.org/packages/phpnt/yii2-metismenu) [![Total Downloads](https://poser.pugx.org/phpnt/yii2-metismenu/downloads)](https://packagist.org/packages/phpnt/yii2-metismenu) [![Latest Unstable Version](https://poser.pugx.org/phpnt/yii2-metismenu/v/unstable)](https://packagist.org/packages/phpnt/yii2-metismenu) [![License](https://poser.pugx.org/phpnt/yii2-metismenu/license)](https://packagist.org/packages/phpnt/yii2-metismenu)
+[![Latest Stable Version](https://poser.pugx.org/phpnt/yii2-pace/v/stable)](https://packagist.org/packages/phpnt/yii2-pace) [![Total Downloads](https://poser.pugx.org/phpnt/yii2-pace/downloads)](https://packagist.org/packages/phpnt/yii2-pace) [![Latest Unstable Version](https://poser.pugx.org/phpnt/yii2-pace/v/unstable)](https://packagist.org/packages/phpnt/yii2-pace) [![License](https://poser.pugx.org/phpnt/yii2-pace/license)](https://packagist.org/packages/phpnt/yii2-pace)
 ### Описание:
-### Плагин поможет сделать меню в боковой колонке сайта, настраиваются выпадающие списки подпунктов и их направление, подходит для Bootstrap вёрстки.
-### [DEMO](http://phpnt.com/widget/metismenu)
+### Автоматический индикатор загрузки страницы.
+### [DEMO](http://phpnt.com/widget/pace)
 
 ------------
 ### - [Поддержать phpNT](http://phpnt.com/donate/index)
@@ -21,78 +21,38 @@ phpNT - metisMenu
 ------------
 
 ```
-php composer.phar require "phpnt/yii2-metismenu" "*"
+php composer.phar require "phpnt/yii2-pace" "*"
 ```
 или
 
 ```
-composer require phpnt/yii2-metismenu
+composer require phpnt/yii2-pace
 ```
 
 или добавить в composer.json файл
 
 ```
-"phpnt/yii2-metismenu": "*"
+"phpnt/yii2-pace": "*"
 ```
 
 ### Представление:
 ------------
 ```php
 <?php
-use yii\widgets\Menu;
-use phpnt\metismenu\MetisMenuAsset;
-MetisMenuAsset::register($this);
+use phpnt\pace\PaceAsset;
+PaceAsset::register($this);
 ?>
 ```
 ```html
-<div class="col-md-4">
-    <div class="sidebar-nav">
-        <?= Menu::widget([
-            'items' => [
-                ['label' => 'Элемент 1',
-                    'url' => ['services/index'],
-                    'options'=>['class'=>'dropdown active'],
-                    'template' => '<a href="{url}" class="has-arrow">{label}</a>',
-                    'items' => [
-                        ['label' => 'Ссылка 1', 'url' => ['#']],
-                        ['label' => 'Ссылка 2', 'url' => ['#']],
-                    ]
-                ],
-                ['label' => 'Элемент 2',
-                    'url' => ['services/index'],
-                    'options'=>['class'=>'dropdown'],
-                    'template' => '<a href="{url}" class="has-arrow">{label}</a>',
-                    'items' => [
-                        ['label' => 'Ссылка 1', 'url' => ['#']],
-                        ['label' => 'Ссылка 2', 'url' => ['#']],
-                    ]
-                ],
-                ['label' => 'Элемент 3',
-                    'url' => ['services/index'],
-                    'options'=>['class'=>'dropdown'],
-                    'template' => '<a href="{url}" class="has-arrow">{label}</a>',
-                    'items' => [
-                        ['label' => 'Ссылка 1', 'url' => ['#']],
-                        ['label' => 'Ссылка 2', 'url' => ['#']],
-                    ]
-                ],
-            ],
-            'options' => [
-                'id'=>'side-menu',
-                'class' => 'metismenu',
-            ],
-            'activeCssClass'=>'active',
-            'firstItemCssClass'=>'fist',
-            'lastItemCssClass' =>'last',
-        ]); ?>
+<div class="pace  pace-inactive">
+    <div class="pace-progress" data-progress-text="100%" data-progress="99">
+        <div class="pace-progress-inner"></div>
     </div>
+    <div class="pace-activity"></div>
 </div>
 ------------
 # Документация (примеры):
-## [metisMenu](https://github.com/onokumus/metisMenu)
-------------
-### Версия:
-### 0.0.1
+## [Pace](http://github.hubspot.com/pace/docs/welcome/)
 ------------
 ### Лицензия:
 ### [MIT](https://ru.wikipedia.org/wiki/%D0%9B%D0%B8%D1%86%D0%B5%D0%BD%D0%B7%D0%B8%D1%8F_MIT)
