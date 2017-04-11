@@ -34,6 +34,10 @@ class PaceAsset extends AssetBundle
         'pace.min.js',
     ];
 
+    public $depends = [
+        'phpnt\pace\PaceCssAsset',
+    ];
+
     public function init()
     {
         parent::init();
